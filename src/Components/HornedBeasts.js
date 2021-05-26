@@ -3,7 +3,11 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from "react-bootstrap/Card";
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
 class HornedBeasts extends React.Component {
     constructor(prpos) {
         super(prpos);
@@ -19,7 +23,27 @@ class HornedBeasts extends React.Component {
 
         return (
             <>
+                <Container  fluid="sm">
+                    <Card style={{ width: '20rem' }}>
+                        <Card.Img variant="top" src={this.props.imgUrl} onClick={this.handelClick} />
+                        <Card.Body>
+                            <Card.Title>{this.props.title}</Card.Title>
+                            <Card.Text>
+                                {this.props.description}
+                            </Card.Text>
+                            <Card.Text>
+                            🌟
+                             {this.props.numOfHorns}
 
+                            </Card.Text>
+                            <Card.Text>
+                                {this.state.numer}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+
+                </Container>
+                {/* 
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={this.props.imgUrl} />
                     <Card.Body>
@@ -36,7 +60,7 @@ class HornedBeasts extends React.Component {
                         </Card.Text>
                         <Button onClick={this.handelClick} variant="primary">Click</Button>
                     </Card.Body>
-                </Card>
+                </Card> */}
 
 
                 {/* <section>
